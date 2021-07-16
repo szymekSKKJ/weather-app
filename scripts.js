@@ -126,9 +126,9 @@ const settingBackgroundAnimation = (sunset, sunrise) => {
 
 const getCityName = async (latitude, longitude) => {
     try {
-        const apiKey = 'dba84a40-e42e-11eb-9f52-89c893b7febe';
-        const response = await fetch(`https://geolocation-db.com/json/${apiKey}`);
-        const {city} = await response.json();
+        const apiKey = 'pk.e6680a3e48349f4feef5a56ae7864ce3';
+        const response = await fetch(`https://eu1.locationiq.com/v1/reverse.php?key=${apiKey}&lat=${latitude}&lon=${longitude}&zoom=18&format=json`);
+        const {address: {city}} = await response.json();
         setData('#city-name', city);
     }
     catch {
