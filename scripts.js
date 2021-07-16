@@ -127,7 +127,7 @@ const settingBackgroundAnimation = (sunset, sunrise) => {
 const getCityName = async (latitude, longitude) => {
     try {
         const apiKey = 'pk.e6680a3e48349f4feef5a56ae7864ce3';
-        const response = await fetch(`https://eu1.locationiq.com/v1/reverse.php?key=${apiKey}&lat=${latitude}&lon=${longitude}&zoom=18&format=json`);
+        const response = await fetch(`https://eu1.locationiq.com/v1/reverse.php?key=${apiKey}&lat=${latitude}&lon=${longitude}&zoom=10&format=json&accept-language=pl`);
         const {address: {city}} = await response.json();
         setData('#city-name', city);
     }
