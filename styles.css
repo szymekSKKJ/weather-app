@@ -293,7 +293,7 @@ html body #app #daily-weather .daily-weather-item .deg-and-icon i {
     background-color: transparent;
   }
   html body #app #current-weather #city-name p {
-    font-size: 12vw;
+    font-size: 10vw;
   }
   html body #app #current-weather #temperature-and-weather-description {
     width: auto;
@@ -320,7 +320,7 @@ html body #app #daily-weather .daily-weather-item .deg-and-icon i {
     background-color: transparent;
   }
   html body #app #current-weather #temperature-and-weather-description #temperature p {
-    font-size: 24vw;
+    font-size: 20vw;
   }
   html body #app #current-weather #temperature-and-weather-description #weather-description {
     width: auto;
