@@ -107,6 +107,14 @@ const isDayChangingColor = (sunset, sunrise) => {
         hourlyWeather.style.backgroundColor = 'rgba(91, 130, 164, 0.15)';      
         dailyWeather.style.backgroundColor = 'rgba(91, 130, 164, 0.15)';  
     }
+    //This function is getting data from actuall (not previous) day, so if there is after midnight, both are false and there is a night beacuse is before this day sunrise
+    //Then setting night colors
+    else {
+        document.body.style.backgroundColor = '#121a21';
+        hourlyWeather.style.backgroundColor = 'rgba(91, 130, 164, 0.15)';      
+        dailyWeather.style.backgroundColor = 'rgba(91, 130, 164, 0.15)';   
+        
+    }
     localStorage.setItem('backgroundColor', document.body.style.backgroundColor);
     localStorage.setItem('itemColorGlass', hourlyWeather.style.backgroundColor);
 }
