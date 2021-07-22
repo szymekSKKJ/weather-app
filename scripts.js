@@ -134,7 +134,7 @@ const settingBackgroundAnimation = (sunset, sunrise) => {
 
 const getCityName = async (latitude, longitude) => {
     try {
-        const apiKey = 'ZW2fZgaJcYkc0CBg0Vxkc7vsbYAuHFZo';
+        const apiKey = 'Ancrj4SvPPA8T02d2Vr8Wg2L7ie2podi';
         const response = await fetch(`https://api.tomtom.com/search/2/reverseGeocode/${latitude},${longitude}.JSON?key=${apiKey}&language=pl-PL`);
         const {addresses: [{address: {localName}}]} = await response.json();
         setData('#city-name', localName);
