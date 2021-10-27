@@ -60,7 +60,7 @@ html body #app #current-weather #city-name {
 }
 
 html body #app #current-weather #city-name p {
-  font-size: 4vw;
+  font-size: 50px;
 }
 
 html body #app #current-weather #temperature-and-weather-description {
@@ -90,7 +90,7 @@ html body #app #current-weather #temperature-and-weather-description #temperatur
 }
 
 html body #app #current-weather #temperature-and-weather-description #temperature p {
-  font-size: 5vw;
+  font-size: 50px;
 }
 
 html body #app #current-weather #temperature-and-weather-description #weather-description {
@@ -100,22 +100,28 @@ html body #app #current-weather #temperature-and-weather-description #weather-de
 }
 
 html body #app #current-weather #temperature-and-weather-description #weather-description p {
-  font-size: 2vw;
+  font-size: 24px;
 }
 
-html body #app #current-weather #weather-icon {
-  width: auto;
-  height: auto;
-  background-color: transparent;
-}
-
-html body #app #current-weather #weather-icon i {
-  font-size: 20vw;
+@media screen and (min-width: 1024px) {
+  html body #app ::-webkit-scrollbar {
+    height: 12px;
+  }
+  html body #app ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  html body #app ::-webkit-scrollbar-thumb {
+    background: #d9d9d9;
+    border-radius: 100px;
+  }
+  html body #app ::-webkit-scrollbar-thumb:hover {
+    background: #cccccc;
+  }
 }
 
 html body #app #hourly-weather {
   width: auto;
-  max-width: 90%;
+  width: 90%;
   min-height: 125px;
   background-color: transparent;
   border-radius: 10px;
@@ -160,25 +166,26 @@ html body #app #hourly-weather .hourly-weather-item:last-child {
   margin-right: 0px;
 }
 
-html body #app #hourly-weather .hourly-weather-item p, html body #app #hourly-weather .hourly-weather-item i {
+html body #app #hourly-weather .hourly-weather-item p,
+html body #app #hourly-weather .hourly-weather-item i {
   padding: 4px;
 }
 
 html body #app #hourly-weather .hourly-weather-item p {
-  font-size: 1.5vw;
+  font-size: 30px;
 }
 
 html body #app #hourly-weather .hourly-weather-item p:nth-child(3) {
-  font-size: 1vw;
+  font-size: 22px;
   margin-top: 4px;
 }
 
 html body #app #hourly-weather .hourly-weather-item i {
-  font-size: 1.5vw;
+  font-size: 24px;
 }
 
 html body #app #daily-weather {
-  width: auto;
+  width: 90%;
   height: auto;
   background-color: transparent;
   border-radius: 10px;
@@ -213,7 +220,7 @@ html body #app #daily-weather .daily-weather-item {
 }
 
 html body #app #daily-weather .daily-weather-item p {
-  font-size: 1.5vw;
+  font-size: 24px;
 }
 
 html body #app #daily-weather .daily-weather-item .deg-and-icon {
@@ -229,228 +236,15 @@ html body #app #daily-weather .daily-weather-item .deg-and-icon {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-left: 200px;
 }
 
-html body #app #daily-weather .daily-weather-item .deg-and-icon p, html body #app #daily-weather .daily-weather-item .deg-and-icon i {
+html body #app #daily-weather .daily-weather-item .deg-and-icon p,
+html body #app #daily-weather .daily-weather-item .deg-and-icon i {
   margin-left: 10px;
   margin-right: 10px;
 }
 
 html body #app #daily-weather .daily-weather-item .deg-and-icon i {
-  font-size: 1.5vw;
-}
-
-@media screen and (max-width: 425px) {
-  html body {
-    width: 100vw;
-    height: 100vh;
-    background-color: transparent;
-    overflow: hidden;
-    font-family: 'Ubuntu', sans-serif;
-    color: #e6e6e6;
-    opacity: 0;
-  }
-  html body #app {
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding-bottom: 50px;
-  }
-  html body #app #current-weather {
-    width: 100%;
-    height: auto;
-    background-color: transparent;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    text-align: center;
-    margin-top: 25px;
-  }
-  html body #app #current-weather #city-name {
-    width: auto;
-    height: auto;
-    background-color: transparent;
-  }
-  html body #app #current-weather #city-name p {
-    font-size: 10vw;
-  }
-  html body #app #current-weather #temperature-and-weather-description {
-    width: auto;
-    height: auto;
-    background-color: transparent;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-bottom: 25px;
-  }
-  html body #app #current-weather #temperature-and-weather-description #temperature {
-    width: auto;
-    height: auto;
-    background-color: transparent;
-  }
-  html body #app #current-weather #temperature-and-weather-description #temperature p {
-    font-size: 20vw;
-  }
-  html body #app #current-weather #temperature-and-weather-description #weather-description {
-    width: auto;
-    height: auto;
-    background-color: transparent;
-  }
-  html body #app #current-weather #temperature-and-weather-description #weather-description p {
-    font-size: 6vw;
-  }
-  html body #app #current-weather #weather-icon {
-    width: auto;
-    height: auto;
-    background-color: transparent;
-  }
-  html body #app #current-weather #weather-icon i {
-    font-size: 20vw;
-  }
-  html body #app #hourly-weather {
-    width: 90%;
-    min-height: 100px;
-    background-color: transparent;
-    border-radius: 10px;
-    padding: 12px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    overflow-y: hidden;
-    overflow-x: auto;
-    margin-top: 25px;
-  }
-  html body #app #hourly-weather .hourly-weather-item {
-    width: auto;
-    height: auto;
-    background-color: transparent;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-left: 6px;
-    margin-right: 6px;
-  }
-  html body #app #hourly-weather .hourly-weather-item:first-child {
-    margin-left: 0px;
-  }
-  html body #app #hourly-weather .hourly-weather-item:last-child {
-    margin-right: 0px;
-  }
-  html body #app #hourly-weather .hourly-weather-item p, html body #app #hourly-weather .hourly-weather-item i {
-    padding: 4px;
-  }
-  html body #app #hourly-weather .hourly-weather-item p {
-    font-size: 6vw;
-  }
-  html body #app #hourly-weather .hourly-weather-item p:nth-child(3) {
-    font-size: 5vw;
-    margin-top: 4px;
-  }
-  html body #app #hourly-weather .hourly-weather-item i {
-    font-size: 7vw;
-  }
-  html body #app #daily-weather {
-    width: 90%;
-    height: auto;
-    background-color: transparent;
-    border-radius: 10px;
-    padding: 12px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-top: 25px;
-    overflow: scroll;
-  }
-  html body #app #daily-weather .daily-weather-item {
-    width: 100%;
-    height: auto;
-    background-color: transparent;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 8px;
-  }
-  html body #app #daily-weather .daily-weather-item p {
-    font-size: 6vw;
-  }
-  html body #app #daily-weather .daily-weather-item .deg-and-icon {
-    width: auto;
-    height: auto;
-    background-color: transparent;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin-left: 0px;
-  }
-  html body #app #daily-weather .daily-weather-item .deg-and-icon p, html body #app #daily-weather .daily-weather-item .deg-and-icon i {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-  html body #app #daily-weather .daily-weather-item .deg-and-icon i {
-    font-size: 6vw;
-  }
+  font-size: 24px;
 }
 /*# sourceMappingURL=styles.css.map */
