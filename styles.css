@@ -105,7 +105,7 @@ html body #app #current-weather #temperature-and-weather-description #weather-de
 
 @media screen and (min-width: 1024px) {
   html body #app ::-webkit-scrollbar {
-    height: 12px;
+    height: 8px;
   }
   html body #app ::-webkit-scrollbar-track {
     background: transparent;
